@@ -330,8 +330,6 @@ class Rift(commands.Cog):
             self.rifts.add_vectors(source, rift, two_way=not one_way)
             if notify:
                 asyncio.ensure_future(
-                    rift.send(
-                        _("{} has linked a rift to here from {}.").format(ctx.author, ctx.channel)
                     )
                 )
         await ctx.send(
